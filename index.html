@@ -4,16 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Western Treasury | Borderless Banking</title>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-family: 'Montserrat', sans-serif;
     }
     
     /* Update the body background style */
@@ -29,22 +30,23 @@
       color: #333333;
     }
     
-    /* Navbar */
+    /* Update these navbar styles */
     .nav-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 3rem 2rem; /* Increased top/bottom padding from 2rem to 3rem */
-      margin-top: 2rem; /* Added margin-top to push it down */
+      padding: 3rem 2rem;
+      margin-top: 2rem;
       width: 100%;
       margin-bottom: 2rem;
       background: transparent;
+    
     }
     
     .logo-container {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap:1rem
     }
 
     .logo-image {
@@ -57,24 +59,37 @@
       font-size: 1.5rem;
       font-weight: 700;
       color: #4f5ba8;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      height:70px;
+      width:auto;
     }
-    
+
+     .logo svg {
+      width: 200px;
+      height: auto;
+    }
+
     .nav-bar ul {
       display: flex;
       list-style: none;
-      gap: 2rem;
+      gap: 2.5rem;
+      margin: 0;
+      padding: 0;
     }
     
     .nav-bar li {
       color: #4f5ba8;
       cursor: pointer;
+      font-weight: 500;
     }
     
     .join-btn {
       background-color: #4f5ba8;
       color: white;
-      padding: 0.6rem 1.2rem;
-      border-radius: 6px;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
       font-weight: 600;
       border: none;
       cursor: pointer;
@@ -89,7 +104,7 @@
     .hero-section {
       display: flex;
       padding: 3rem 2rem; /* Increased from 1rem to 3rem */
-      margin-top: 2rem; /* Increased from 1rem to 2rem */
+      margin-top: 5rem;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -132,6 +147,7 @@
       gap: 1.5rem;
       margin-bottom: 2rem;
       width: 100%;
+      padding-right: 75px;
     }
 
     .countdown-box {
@@ -269,6 +285,56 @@
       background-image: url('https://cryptologos.cc/logos/tether-usdt-logo.png');
       animation-delay: 1.5s;
     }
+    footer {
+            background-color: #2a2f4f;
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .social-icon {
+            color: white;
+            font-size: 24px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-3px);
+            opacity: 0.8;
+        }
+        
+        /* Icon styles */
+        .fa-twitter {
+            color: #1DA1F2;
+        }
+        
+        .fa-instagram {
+            color: #E1306C;
+        }
+        
+        .fa-telegram {
+            color: #0088cc;
+        }
+        
+        .social-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .social-container span {
+            margin-right: 15px;
+            font-weight: 500;
+        }
     
     @keyframes float {
       0%, 100% {
@@ -295,6 +361,9 @@
 
       .content-left, .content-right {
         max-width: 500px;
+      }
+      .countdown-container{
+        padding-right: 30px;
       }
     }
 
@@ -327,18 +396,15 @@
     
     @media screen and (max-width: 768px) {
       .nav-bar {
-        padding: 2rem 1.5rem; /* Adjusted padding for mobile */
-        margin-top: 1rem; /* Reduced margin for mobile */
-        margin-bottom: 1rem;
-        flex-direction: column;
-        gap: 1rem;
+        padding: 1rem;
+      }
+      
+      .logo {
+        height: 28px;
       }
       
       .nav-bar ul {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-        display: none; /* This will hide just the navigation links */
+        display: none;
       }
       
       .join-btn {
@@ -399,6 +465,7 @@
 
       .countdown-container {
         gap: 0.75rem;
+        padding-left: 40px;
       }
       
       .countdown-box {
@@ -472,14 +539,10 @@
   <!-- Navbar -->
   <nav class="nav-bar container">
     <div class="logo-container">
-    
-      <div class="logo">WesternTreasury</div>
+      <img src="wt-logo.svg" alt="Western Treasury" class="logo" />
     </div>
-    <ul>
-      <li>Team</li>
-      <li>Contact us</li>
-    </ul>
-    <button class="join-btn" id="navJoinBtn" >Join waitlist</button>
+    
+    <button class="join-btn" id="navJoinBtn">Join waitlist</button>
   </nav>
 
   <!-- Hero Section -->
@@ -492,7 +555,7 @@
       </h1>
       <p>
         Experience fast, secure, and seamless crypto-to-Naira transactions with Western Treasury.
-        Enjoy competitive exchange rates, instant settlements, and zero hassle.
+    
         <br>Join our waitlist today and be among the first to unlock the future of borderless banking in Nigeria.
       </p>
 
@@ -540,6 +603,20 @@
       <img src="bitcoin-icon.png" alt="Bitcoin" class="coin-1">
       <img src="usdt-icon.png" alt="USDT" class="coin-2">
     </div>
+
+     <div class="social-container">
+                <span>Follow us:</span>
+                <div class="social-links">
+                    <a href="https://x.com/WTreasuryGlobal" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/wtreasuryglobal" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://t.me/WTreasuryGlobal" class="social-icon">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                </div>
   </section>
 
    <script>
@@ -713,4 +790,4 @@
     });
   </script>
 </body>
-</html> 
+</html>
