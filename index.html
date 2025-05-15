@@ -62,7 +62,7 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      height:70px;
+      height:70px; /* Updated height */
       width:auto;
     }
 
@@ -400,7 +400,7 @@
       }
       
       .logo {
-        height: 28px;
+        height: 35px; /* Slightly smaller on mobile but still prominent */
       }
       
       .nav-bar ul {
@@ -409,7 +409,9 @@
       
       .join-btn {
         width: 100%;
-        max-width: 200px;
+        max-width: 140px; /* Reduced max-width */
+        padding: 0.6rem 1.2rem; /* Smaller padding */
+        font-size: 0.9rem; /* Smaller font size */
       }
 
       .hero-section {
@@ -422,12 +424,25 @@
       }
       
       .content-right {
-        height: 300px;
+        display: none; /* Hide the crypto coins section on mobile */
       }
-      
-      .coin-1, .coin-2 {
-        width: 100px;
-        height: 100px;
+
+      .social-container {
+        width: 100%;
+        justify-content: center;
+        margin-top: 2rem;
+        padding: 1rem;
+      }
+
+      footer {
+        margin-top: 2rem;
+        padding: 2rem 1rem;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
       }
 
       #successMessage {
@@ -442,7 +457,11 @@
     
     @media screen and (max-width: 480px) {
       .nav-bar {
-        padding: 1rem 0.5rem;
+        padding: 0.75rem;
+      }
+      
+      .logo {
+        height: 32px; /* Even slightly smaller on very small devices */
       }
       
       h1 {
@@ -479,6 +498,22 @@
       
       .countdown-box .label {
         font-size: 0.75rem;
+      }
+
+      .join-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+        max-width: 120px;
+      }
+
+      .social-container {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .social-links {
+        justify-content: center;
       }
     }
 
